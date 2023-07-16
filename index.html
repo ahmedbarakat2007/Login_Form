@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://codeorigin.jquery.com/jquery-2.0.3.min.js"></script>
+    <title>Login</title>
+</head>
+<body>
+    <center>
+        <br><br>
+        <div class="header">
+            <h1>Login</h1>
+        </div>
+        <br><br><br><br><br><br>
+        <div class ="content">
+            <br><br><br>
+            <form name="dinomi" method= "post" action="procc.php">
+            <input type="text" placeholder="Username" id="logbox" name="username" required><br><br>
+            <input type="password" placeholder="Password" id="logbox1" name="password" required><br><br>
+            <input type="checkbox" class="logchk"  onclick="myFunction()"><label id="logchk">Show Password</label></input><br><br>
+            <input type="submit" value="Login" name="loveu" id="logbtn"><br>
+            <a href="signup.html" id="sinlink">Don't have an Account</a>
+            </form>
+            <br><br><br>
+            <a href="about.html"><button id="logbtn">About</button></a><br>
+        </div>
+    </center>
+</body>
+<script>
+function myFunction() {
+    var x = document.getElementById("logbox1");
+    if (x.type === "password") {
+      x.type = "text";
+    } else {
+      x.type = "password";
+    }
+  }
+</script>
+</html>
