@@ -16,11 +16,11 @@
         <br><br><br><br><br><br>
         <div class ="content">
             <br><br><br>
-            <form name="dinomi" method= "post" action="procc.php">
+            <form name="dinomi" method= "post" action="procc.php" onsubmit=" return requirea7a();">
             <input type="text" name="username" placeholder="Username" id="logbox" required><br><br>
             <input type="email" name="email" placeholder="Email" id="logbox" required><br><br>
             <input type="text" name="password" placeholder="Password" id="logbox1" required><br><br>
-            <input type="text"  placeholder="Confirm Password" id="logbox" required><br><br>
+            <input type="text"  placeholder="Confirm Password" id="logbox2" required><br><br>
             <label id="logage">Birth Date:</label><br><br>
             <input type="date" name="birthDate" id="logbox" required><br><br><br>
             <div class="custom-select" style="width:200px;">
@@ -31,7 +31,7 @@
                   <option value="2">Why Are You Gay</option>
                 </select>
               </div><br><br>
-            <input type="submit" value="SignUp" name="loveux" id="logbtn"><br>
+            <input type="submit" value="SignUp" name="loveux" onclick="requirea7a();" id="logbtn"><br>
             <a href="index.html" id="sinlink">I have an Account</a>
             </form>
             <br><br><br>
@@ -120,5 +120,17 @@ function closeAllSelect(elmnt) {
 /* If the user clicks anywhere outside the select box,
 then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
+function requirea7a() {  
+   var pass = document.getElementById("logbox1").value;  
+   var vpass = document.getElementById("logbox2").value;  
+   if(pass == vpass)  
+   {   
+    console.log ("Omk Sa7bete")
+    return true;     
+   } else {
+    alert("Passwords did not match");
+    return false;
+   }  
+ }  
 </script>
 </html>
